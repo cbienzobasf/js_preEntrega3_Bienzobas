@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Servicios para Bodas</title>
+
+    
+</head>
+<body>
+    <h1>Gestión de Servicios para Matrimonios</h1>
+
+    <!-- Filtros por Nombre y Precio -->
+    <div id="filtros">
+        <h2>Filtros</h2>
+        <!-- Filtro por nombre del servicio -->
+        <label for="filtro-nombre"><strong>Nombre:</strong></label>
+        <input type="text" id="filtro-nombre" placeholder="Ejemplo: Música">
+        
+        <!-- Filtro por precio mínimo -->
+        <label for="filtro-precio-min"><strong>Precio mínimo:</strong></label>
+        <input type="number" id="filtro-precio-min" placeholder="100000">
+        
+        <!-- Filtro por precio máximo -->
+        <label for="filtro-precio-max"><strong>Precio máximo:</strong></label>
+        <input type="number" id="filtro-precio-max" placeholder="99999999">
+        
+        <!-- Botón para aplicar los filtros por usuario -->
+        <button id="aplicar-filtro">Filtrar</button>
+    </div>
+
+    <!-- Filtros por categoría -->
+    <div id="filtro-categorias">
+        <h3>Categorías</h3>
+        <!-- Checkbox para selección de categorías por usuario -->
+        <div>
+            <input type="checkbox" id="categoria-banqueteria" value="Banquetería">
+            <label for="categoria-banqueteria">Banquetería</label>
+        </div>
+        <div>
+            <input type="checkbox" id="categoria-entretenimiento" value="Entretenimiento">
+            <label for="categoria-entretenimiento">Entretenimiento</label>
+        </div>
+        <div>
+            <input type="checkbox" id="categoria-decoracion" value="Decoración">
+            <label for="categoria-decoracion">Decoración</label>
+        </div>
+        <div>
+            <input type="checkbox" id="categoria-logistica" value="Logística">
+            <label for="categoria-logistica">Logística</label>
+        </div>
+        <!-- Botón para aplicar filtros por categorías por usuario -->
+        <button id="aplicar-filtro-categorias">Filtrar Categorías</button>
+    </div>
+
+    <!-- Servicios Disponibles -->
+    <div>
+        <h2>Servicios Disponibles</h2>
+        <!-- Tabla donde se renderizarán los servicios -->
+        <table border="1" id="tabla-servicios">
+            <thead>
+                <tr>
+                    <th>Servicio</th>
+                    <th>Categoría</th>
+                    <th>Precio</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Filas de servicios se agregarán  por script en archivo .js -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Carro de Compras -->
+    <div id="carro-compra">
+        <h2>Carro de Compra</h2>
+        <!-- Servicios agregados al carro de compras -->
+        <ul id="lista-carro"></ul>
+        <!-- Total acumulado de los servicios agregados en el carro de compras-->
+        <p>Total: <span id="total">0</span></p>
+    </div>
+
+    <!-- Script del simulador -->
+    <script src="simulador.js" defer></script>
+</body>
+</html>
